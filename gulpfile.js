@@ -1,39 +1,28 @@
-const gulp = require('gulp');
-const del = require('del');
+const gulp = require('gulp')
 
-const styles = require('./tasks/styles');
-const html = require('./tasks/html');
-const htmlmin = require('./tasks/minhtml');
-const cssmin = require('./tasks/mincss');
-const imagemin = require('./tasks/imagemin');
-const webp = require('./tasks/webp');
-const sprite = require('./tasks/sprite');
+const serve = require('./gulp/tasks/serve')
+const pug2html = require('./gulp/tasks/pug2html')
+const styles = require('./gulp/tasks/styles')
+const script = require('./gulp/tasks/script')
+const fonts = require('./gulp/tasks/fonts')
+const imageMinify = require('./gulp/tasks/imageMinify')
+const clean = require('./gulp/tasks/clean')
+const copyDependencies = require('./gulp/tasks/copyDependencies')
+const lighthouse = require('./gulp/tasks/lighthouse')
+const svgSprite = require('./gulp/tasks/svgSprite')
 
-function clean() {
-  return del(['./build/*']);
+function setMode(isProduction = false) {
+  return cb => {
+    process.env.NODE_ENV = isProduction ? 'production' : 'development'
+    cb()
+  }
 }
 
-// function images() {
-//   return gulp.src([
-//     'src/images/**/*.{png,jpg,svg}'
-//   ], {
-//     base: 'images'
-//   })
-//     .pipe(gulp.dest('./build/img'))
-// }
+const dev = gulp.parallel(pug2html, styles, script, fonts, imageMinify, svgSprite)
 
-function images() {
-  return gulp.src('src/images/**/*.{png,jpg,svg}')
-    .pipe(gulp.dest('./build/img'))
-}
+const build = gulp.series(clean, copyDependencies, dev)
 
-function scripts() {
-  return gulp.src('./build/js/*')
-    .pipe(gulp.dest('./build/js'))
-}
+module.exports.start = gulp.series(setMode(), build, serve)
+module.exports.build = gulp.series(setMode(true), build)
 
-exports.start = gulp.series(clean, gulp.parallel(html, styles, images, scripts));
-exports.dev = gulp.parallel(html, styles, images, scripts);
-exports.build = gulp.series(htmlmin, cssmin, imagemin);
-exports.sprite = gulp.series(sprite);
-exports.webp = gulp.series(webp);
+module.exports.lighthouse = gulp.series(lighthouse)
