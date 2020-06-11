@@ -4,4 +4,89 @@ block var
   -var title = 'Главная страница'
 
 block content
-  
+  main.main-content
+    h1.visually-hidden Пинк
+
+    section.banner
+      h2 Взгляните на жизнь иначе!
+      button.banner__button Скачать приложение
+      img.banner__brand-ico.banner__brand-ico--apple(src="../img/svg/logo-apple.svg" alt="иконка Apple" width="47" height="56")
+      img.banner__brand-ico.banner__brand-ico--adnroid(src="../img/svg/logo-android.svg" alt="иконка Anrdoid" width="43" height="47")
+      img.banner__brand-ico.banner__brand-ico--windows(src="../img/svg/logo-windows.svg" alt="иконка Windows" width="44" height="41")
+      p Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows8
+
+    section.features
+      h2.visually-hidden Преимущества приложения
+      p.features__slogan Устали от серости мегаполиса? Нам есть, что вам  предложить!
+      ul.features__list-img
+        li.features__item.features__item--first
+        li.features__item.features__item--second
+        li.features__item.features__item--third
+      ul.features__list
+        li.features__item
+          div
+            h3 Поднимает настроение
+            p Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+        li.features__item
+          h3 Меняет мир вокруг
+          p Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+        li.features__item
+          h3 Заводит новых друзей
+          p Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+      div <!-- здесь будет картика с часиками-->
+      div
+        h3 Эффект на 24 часа!
+        p Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+        a(href="#") Узнать больше об исследовании
+
+    section.comment
+    h2.visually-hidden Отзывы о приложении
+      ul.comment__list
+        li.comment__item
+          blockquote
+            p Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+            p
+              span Николай Петров
+              | 25 лет, водитель трамвая
+
+    section.price
+    h2.visually-hidden Цены на приложение
+    table
+      tr
+        td <!-- пустя ячейка -->
+        td База 1,99 USD
+        td Стандарт 3.99 USD
+        td Анлим 9,99 USD
+      tr
+        td Розовый фильтр
+        td
+          span.visually-hidden Да
+        td
+          span.visually-hidden Да
+        td
+          span.visually-hidden Да
+      tr
+        td Смайлики
+        td
+          span.visually-hidden Нет
+        td
+          span.visually-hidden Да
+        td
+          span.visually-hidden Да
+      tr
+        td Комментарии
+        td
+          span.visually-hidden Нет
+        td
+          span.visually-hidden Нет
+        td
+          span.visually-hidden Да
+
+    section.contacts
+      h2.visually-hidden Как с нами связаться
+      p Остались вопросы? Свяжитесь с нами!
+      p.contacts__tel Звоните: +7 (812) 555-66-66
+      p.contacts__adress Приезжайте в гости: ул. Большая Конюшенная, 19/8
+      p.contacts__email mail@htmlacademy.ru
+      div.contacts__map
+        img(src="../img/mobile/map.jpg", alt="карта")
