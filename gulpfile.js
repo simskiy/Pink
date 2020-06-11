@@ -24,5 +24,6 @@ const build = gulp.series(clean, copyDependencies, dev)
 
 module.exports.start = gulp.series(setMode(), build, serve)
 module.exports.build = gulp.series(setMode(true), build)
+module.exports.dev = gulp.series(setMode(), serve)
 
 module.exports.lighthouse = gulp.series(lighthouse)
