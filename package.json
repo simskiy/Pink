@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp start",
-    "build": "gulp build",
+    "build": "gulp prod",
     "lighthouse": "gulp build && gulp lighthouse",
     "test": "editorconfig-cli && stylelint ./src/styles/**/*.scss --syntax scss && eslint ./src/js",
     "stylelint-fix": "stylelint ./src/styles/**/*.scss --fix --syntax scss",
