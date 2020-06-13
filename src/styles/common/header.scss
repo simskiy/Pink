@@ -1,1 +1,19 @@
-@import "header/header";
+
+
+
+@include media-mobile {
+  .main-nav {
+    background-color: #{$mainColor};
+  }
+
+  .main-nav__list {
+    display: flex;
+    list-style: none;
+  }
+}
+
+@include media-tablet {
+  .main-nav {
+    background-color: red;
+  }
+}
