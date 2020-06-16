@@ -2,29 +2,27 @@
   "env": {
     "jquery": true
   },
-  "overrides": [
-    {
-      "files": [
-        "src/**/*.js"
+  "overrides": [{
+    "files": [
+      "src/**/*.js"
+    ],
+    "extends": [
+      "standard",
+      "htmlacademy/es6"
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        4
       ],
-      "extends": [
-        "standard",
-        "htmlacademy/es6"
+      "semi": [
+        "error",
+        "always"
       ],
-      "rules": {
-        "indent": [
-          "error",
-          4
-        ],
-        "semi": [
-          "error",
-          "never"
-        ],
-        "quotes": [
-          "error",
-          "backtick"
-        ]
-      }
+      "quotes": [
+        "error",
+        "backtick"
+      ]
     }
-  ]
+  }]
 }

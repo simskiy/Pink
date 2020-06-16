@@ -1,16 +1,112 @@
-@include media-mobile {
-  .main-nav {
-    background-color: #{$mainColor};
-  }
+.page-header {
+  background-color: #{$mainColor};
+}
 
-  .main-nav__list {
-    display: flex;
-    list-style: none;
+.main-nav {
+  position: relative;
+  margin-left: auto;
+  border-left: 1px solid #000000;
+}
+
+.main-nav__top {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  height: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+}
+
+.main-nav__logo {
+  width: 75px;
+  height: 22px;
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
-@include media-tablet {
-  .main-nav {
-    background-color: red;
-  }
+.main-nav__toggle {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  fill: #ffffff;
+}
+
+.main-nav__close {
+  width: 24px;
+  height: 24px;
+}
+
+.main-nav__open {
+  width: 50px;
+  height: 24px;
+}
+
+.main-nav__close--hidden,
+.main-nav__open--hidden {
+  display: none;
+}
+
+.main-nav__close:hover,
+.main-nav__open:hover {
+  fill: #{$redColor};
+}
+
+.main-nav__close:active,
+.main-nav__open:active {
+  fill: #ffffff;
+  opacity: 0.3;
+}
+
+.main-nav__list {
+  position: absolute;
+  top: 70px;
+  right: 0.5px;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid #000000;
+  background-color: #{$mainColor};
+}
+
+.no-js .main-nav__list {
+  position: static;
+  box-sizing: border-box;
+  top: 0;
+  right: 0;
+}
+
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list__item {
+  height: 63px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #{$greyColor};
+  border-left: 1px solid #{$greyColor};
+}
+
+.site-list__link {
+  line-height: 63px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
 }
