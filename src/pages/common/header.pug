@@ -1,18 +1,14 @@
 header.page-header.no-js
-  nav.main-nav
-    .main-nav__top
+  nav.main-nav.main-nav--static
+    .main-nav__top.main-nav__top--opacity
       a.main-nav__logo()
-        picture
-          source(media="(min-width:1024px)" srcset="img/desktop/logo-desktop.svg")
-          source(media="(min-width:768px)" srcset="img/tablet/logo-tablet.svg")
-          img(src="img/mobile/logo-mobile.svg", alt="Логотип Пинк" width="75" height="22")
       button.main-nav__toggle(type="button")
         svg.main-nav__close(width="24" height="24")
           use(xlink:href="img/svg/sprite-index.svg#close")
         svg.main-nav__open.main-nav__open--hidden(width="50" height="24")
           use(xlink:href="img/svg/sprite-index.svg#open")
         span.visually-hidden Открыть меню
-    ul.main-nav__list.site-list
+    ul.main-nav__list.site-list.main-nav__list--close.main-nav__list--close-hidden
       li.site-list__item
         a.site-list__link(href="") Главная
       li.site-list__item
