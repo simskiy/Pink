@@ -30,7 +30,8 @@
       "vm",
       "vmax",
       "vmin",
-      "deg"
+      "deg",
+      "s"
     ]
   }
 }

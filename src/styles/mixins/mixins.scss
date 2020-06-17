@@ -28,6 +28,13 @@
   }
 }
 
+@mixin media-desktop {
+
+  @media (min-width: $mediaWidthDesktop) {
+    @content;
+  }
+}
+
 @mixin media-custom($width) {
 
   @media (min-width: $width) {
