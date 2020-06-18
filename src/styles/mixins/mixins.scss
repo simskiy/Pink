@@ -41,3 +41,22 @@
     @content;
   }
 }
+
+@mixin retina-2x {
+
+  @media (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@mixin retina-3x {
+  @media (min-resolution: 2.5dppx) {
+    @content;
+  }
+}
+
+@mixin retina-4x {
+  @media (min-resolution: 3.5dppx) {
+    @content;
+  }
+}

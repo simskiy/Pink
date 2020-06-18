@@ -11,16 +11,22 @@ block content
     h1.visually-hidden Пинк
 
     section.banner
-      h2 Взгляните на жизнь иначе!
-      button.banner__button Скачать приложение
-      img.banner__brand-ico.banner__brand-ico--apple(src="../img/svg/logo-apple.svg" alt="иконка Apple" width="47" height="56")
-      img.banner__brand-ico.banner__brand-ico--adnroid(src="../img/svg/logo-android.svg" alt="иконка Anrdoid" width="43" height="47")
-      img.banner__brand-ico.banner__brand-ico--windows(src="../img/svg/logo-windows.svg" alt="иконка Windows" width="44" height="41")
-      p Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows8
+      .banner__wrapper
+        h2.banner__caption Взгляните <br> на жизнь <br> иначе!
+        button.banner__button Скачать приложение
+        ul.banner__brand-list.brand
+          li
+            img.banner__brand-item.brand__apple(src="../img/svg/logo-apple.svg" alt="иконка Apple" width="47" height="56")
+          li
+            img.banner__brand-item.brand__android(src="../img/svg/logo-android.svg" alt="иконка Anrdoid" width="43" height="47")
+          li
+            img.banner__brand-item.brand__windows(src="../img/svg/logo-windows.svg" alt="иконка Windows" width="44" height="41")
+        p.banner__text Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows8
 
     section.features
       h2.visually-hidden Преимущества приложения
-      p.features__slogan Устали от серости мегаполиса? Нам есть, что вам  предложить!
+      p.features__slogan Устали от серости мегаполиса?
+      p.features__slogan Нам есть, что вам  предложить!
       ul.features__list-img
         li.features__item.features__item--first
         li.features__item.features__item--second

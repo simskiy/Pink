@@ -21,7 +21,6 @@
 .main-nav {
   position: absolute;
   width: 100%;
-  border-left: 1px solid #000000;
 }
 
 .no-js .main-nav--static {
@@ -41,7 +40,7 @@
 }
 
 .main-nav__top--opacity {
-  background-color: rgba($mainColor, 0.3);
+  background-color: rgba($mainColor, 0.7);
   border: none;
 }
 
@@ -195,20 +194,20 @@
 
 @include media-desktop {
   .page-header {
-    position: relative;
-    width: 1200px;
+    position: static;
+    max-width: 1200px;
     height: 110px;
     margin: auto;
-    background-color: rgba($mainColor, 0.3);
   }
 
   .main-nav {
-    position: absolute;
     display: flex;
-    width: 945px;
-    margin-left: 125px;
-    margin-right: 130px;
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding-left: 125px;
+    padding-right: 125px;
     border: none;
+    background-color: rgba($mainColor, 0.7);
   }
 
   .main-nav__logo {
@@ -237,6 +236,8 @@
   .main-nav__list {
     position: static;
     display: flex;
+    flex-wrap: wrap;
+    // width: 630px;
     flex-direction: row;
     justify-content: space-between;
     margin-left: 170px;
@@ -249,9 +250,12 @@
   }
 
   .site-list__item {
+    margin-right: 10px;
     width: auto;
     border: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
-
-
 }

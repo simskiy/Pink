@@ -1,0 +1,174 @@
+.banner {
+  box-sizing: border-box;
+  background: url("../img/mobile/bg-img@x1.jpg") no-repeat;
+  background-color: $mainColor;
+  background-size: contain;
+  height: calc(144.375vw + 270px);
+}
+
+.banner__wrapper {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @include retina-2x {
+    background: url("../img/mobile/bg-img@x2.jpg") no-repeat;
+    background-size: contain;
+  }
+
+  @include retina-3x {
+    background: url("../img/mobile/bg-img@x3.jpg") no-repeat;
+    background-size: contain;
+  }
+}
+
+.banner__caption {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.banner__button {
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  box-sizing: border-box;
+  border-width: 3px;
+  border-color: #ffffff;
+  border-radius: 30px;
+  background: transparent;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: calc(144.375vw + 28px);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffffff;
+    color: $redColor;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    color: $redColor;
+    opacity: 0.3;
+  }
+}
+
+.banner__brand-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.banner__text {
+  padding-left: 45px;
+  padding-right: 45px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+}
+
+@include media-tablet {
+  .banner {
+    height: 110.6060vw;
+    background: url("../img/tablet/bg-img@x1.jpg") no-repeat;
+    background-size: contain;
+
+    @include retina-2x {
+      background: url("../img/tablet/bg-img@x2.jpg") no-repeat;
+      background-size: contain;
+    }
+
+    @include retina-3x {
+      background: url("../img/tablet/bg-img@x3.jpg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .banner__wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 300px;
+    margin-left: 20px;
+    padding-top: 210px;
+    padding-bottom: 110px;
+
+    @include retina-2x {
+      background: none;
+    }
+
+    @include retina-3x {
+      background: none;
+    }
+  }
+
+  .banner__caption {
+    display: inline;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .banner__button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .banner__brand-list {
+    margin-top: 45px;
+    margin-bottom: 40px;
+  }
+
+  .banner__text {
+    font-size: 18px;
+    padding: 0;
+  }
+}
+
+@include media-desktop {
+  .banner {
+    height: 853px;
+    margin-top: -110px;
+    background: url("../img/desktop/bg-img@x1.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .banner__wrapper {
+    display: flex;
+    margin-left: 125px;
+    padding-top: 213px;
+
+    @include retina-2x {
+      background: none;
+    }
+
+    @include retina-3x {
+      background: none;
+    }
+  }
+
+
+
+  .banner__button {
+    // margin-top: 40px;
+    margin: 0;
+  }
+
+  .banner__brand-list {
+    margin: 0;
+    // margin-top: 65px;
+    // margin-bottom: 60px;
+  }
+}
