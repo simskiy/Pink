@@ -26,37 +26,38 @@ block content
     section.features
       h2.visually-hidden Преимущества приложения
       p.features__slogan Устали от серости мегаполиса?
-      p.features__slogan Нам есть, что вам  предложить!
-      ul.features__list-img
-        li.features__item.features__item--first
-        li.features__item.features__item--second
-        li.features__item.features__item--third
-      ul.features__list
-        li.features__item
-          div
-            h3 Поднимает настроение
-            p Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-        li.features__item
-          h3 Меняет мир вокруг
-          p Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-        li.features__item
-          h3 Заводит новых друзей
-          p Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-      div <!-- здесь будет картика с часиками-->
-      div
-        h3 Эффект на 24 часа!
-        p Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
-        a(href="#") Узнать больше об исследовании
+      p.features__slogan Нам есть, что вам
+       span.features__slogan--br предложить!
+      .features__block
+        ul.features__list-img
+          li.features__item.features__item--first
+          li.features__item.features__item--second
+          li.features__item.features__item--third
+        ul.features__list
+          li.features__item
+            h3.item__header Поднимает настроение
+            p.item__text Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          li.features__item
+            h3.item__header  Меняет мир вокруг
+            p.item__text  Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          li.features__item.features__item--last
+            h3.item__header  Заводит новых друзей
+            p.item__text.item__text--last  Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+        div.features__iphone <!-- картика iphone (фоном) -->
+      div.features__jog.jog
+        h3.jog__header Эффект на 24 часа!
+        p.jog__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+        a.jog__link(href="#") Узнать больше об исследовании
 
     section.comment
     h2.visually-hidden Отзывы о приложении
-      ul.comment-list
-        li.comment-list__item
-          blockquote
-            p Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-            p
-              span Николай Петров
-              | 25 лет, водитель трамвая
+    ul.comment-list
+      li.comment-list__item
+        blockquote
+          p Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+          p
+            span Николай Петров
+            | 25 лет, водитель трамвая
 
     section.price
     h2.visually-hidden Цены на приложение

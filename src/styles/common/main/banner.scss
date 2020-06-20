@@ -1,7 +1,7 @@
 .banner {
   box-sizing: border-box;
   background: url("../img/mobile/bg-img@x1.jpg") no-repeat;
-  background-color: $mainColor;
+  background-color: $bgColor;
   background-size: contain;
   height: calc(144.375vw + 270px);
 }
@@ -61,6 +61,7 @@
 .banner__brand-list {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -80,7 +81,7 @@
 
 @include media-tablet {
   .banner {
-    height: 110.6060vw;
+    height: 110.606vw;
     background: url("../img/tablet/bg-img@x1.jpg") no-repeat;
     background-size: contain;
 
@@ -158,8 +159,6 @@
       background: none;
     }
   }
-
-
 
   .banner__button {
     // margin-top: 40px;

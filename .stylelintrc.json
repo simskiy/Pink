@@ -31,7 +31,10 @@
       "vmax",
       "vmin",
       "deg",
-      "s"
+      "s",
+      "vw",
+      "vh",
+      "dppx"
     ]
   }
 }
