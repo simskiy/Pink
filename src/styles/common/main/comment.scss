@@ -1,0 +1,167 @@
+.comment {
+  margin-top: 45px;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comment-list__review {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 0;
+}
+
+.review__block {
+  margin-top: 25px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: $mainColor;
+}
+
+.review__name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review__age {
+  display: none;
+  margin: 0;
+}
+
+.comment-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 45px;
+}
+
+.comment-page__label {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: $mainColor;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-left: auto;
+  }
+
+  &:last-of-type {
+    margin-right: auto;
+  }
+}
+
+.comment-page__item {
+  display: none;
+
+  &:checked + .comment-page__label {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px $mainColor;
+    opacity: 1;
+  }
+}
+
+@include media-tablet {
+  .comment {
+    margin: 0;
+  }
+
+  .comment-list__review {
+    flex-direction: column;
+  }
+
+  .review__block {
+    margin-top: 0;
+    font-size: 18px;
+    color: $mainColor;
+  }
+
+  .review__name {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+
+  .review__age {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: $mainColor;
+  }
+
+  .comment-page {
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+}
+
+@include media-desktop {
+  .comment {
+    position: relative;
+    padding-top: 190px;
+    padding-left: 255px;
+    padding-right: 255px;
+    padding-bottom: 45px;
+    background-image: url("../img/desktop/quotes.png");
+    background-repeat: no-repeat;
+    background-position: center 73px;
+  }
+
+  .review__block {
+    margin: 0;
+  }
+
+  .review__name {
+    font-size: 24px;
+  }
+
+  .review__age {
+    font-size: 18px;
+  }
+
+  .comment-page {
+    display: none;
+  }
+
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $mainColor;
+    border-left: none;
+    border-bottom: none;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .nav-arrow--left {
+    left: 130px;
+    transform: rotate(-135deg);
+  }
+
+  .nav-arrow--right {
+    right: 130px;
+    transform: rotate(45deg);
+  }
+}

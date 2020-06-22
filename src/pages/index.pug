@@ -12,7 +12,12 @@ block content
 
     section.banner
       .banner__wrapper
-        h2.banner__caption Взгляните <br> на жизнь <br> иначе!
+        h2.banner__caption
+        | Взгляните
+        br
+        | на жизнь
+        br
+        | иначе!
         button.banner__button Скачать приложение
         ul.banner__brand-list.brand
           li
@@ -34,31 +39,39 @@ block content
           li.features__item.features__item--second
           li.features__item.features__item--third
         ul.features__list
-          li.features__item.features__item--text
+          li.features__item.features__item--text.item
             h3.item__header Поднимает настроение
             p.item__text Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-          li.features__item.features__item--text
+          li.features__item.features__item--text.item
             h3.item__header  Меняет мир вокруг
             p.item__text  Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          li.features__item.features__item--last.features__item--text
+          li.features__item.features__item--last.features__item--text.item
             h3.item__header  Заводит новых друзей
             p.item__text.item__text--last  Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-        div.features__iphone <!-- картика iphone (фоном) -->
-      div.features__jog.jog
+        .features__iphone <!-- картика iphone (фоном) -->
+      .features__jog.jog
         h3.jog__header Эффект
           span.jog__header--br на 24 часа!
         p.jog__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
         a.jog__link(href="#") Узнать больше об исследовании
 
     section.comment
-    h2.visually-hidden Отзывы о приложении
-    ul.comment-list
-      li.comment-list__item
-        blockquote
-          p Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-          p
-            span Николай Петров
-            | 25 лет, водитель трамвая
+      h2.visually-hidden Отзывы о приложении
+      ul.comment-list
+        li.comment-list__item
+          blockquote.comment-list__review.review
+            p.review__block &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
+            p.review__name Николай Петров
+            p.review__age 25 лет, водитель трамвая
+      .nav-arrow.nav-arrow--left
+      .nav-arrow.nav-arrow--right
+      p.comment-page
+        input.comment-page__item(type="radio", name="toggle" id="pag1" checked)
+        label.comment-page__label(for="pag1")
+        input.comment-page__item(type="radio", name="toggle" id="pag2")
+        label.comment-page__label(for="pag2")
+        input.comment-page__item(type="radio", name="toggle" id="pag3")
+        label.comment-page__label(for="pag3")
 
     section.price
     h2.visually-hidden Цены на приложение
