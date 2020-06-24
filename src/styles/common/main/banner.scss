@@ -26,7 +26,7 @@
 .banner__caption {
   display: none;
   margin: 0;
-  padding: 0;
+  padding-bottom: 35px;
 }
 
 .banner__button {
@@ -64,9 +64,13 @@
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px 0 20px;
   margin-top: 40px;
   margin-bottom: 30px;
+}
+
+.brand__link {
+  display: inline-block;
 }
 
 .banner__text {
@@ -160,14 +164,15 @@
     }
   }
 
+  .banner__caption {
+    padding: 0;
+  }
+
   .banner__button {
-    // margin-top: 40px;
     margin: 0;
   }
 
   .banner__brand-list {
     margin: 0;
-    // margin-top: 65px;
-    // margin-bottom: 60px;
   }
 }

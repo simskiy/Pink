@@ -1,8 +1,5 @@
 extends common/layout
 
-//- prepend header
-  include ../img/svg/sprite-index.svg
-
 block var
   -var title = 'Главная страница'
 
@@ -13,26 +10,29 @@ block content
     section.banner
       .banner__wrapper
         h2.banner__caption
-        | Взгляните
-        br
-        | на жизнь
-        br
-        | иначе!
+          | Взгляните
+          br
+          | на жизнь
+          br
+          | иначе!
         button.banner__button Скачать приложение
         ul.banner__brand-list.brand
           li
-            img.banner__brand-item.brand__apple(src="../img/svg/logo-apple.svg" alt="иконка Apple" width="47" height="56")
+            a.brand__link
+              img.banner__brand-item.brand__apple(src="../img/svg/logo-apple.svg" alt="иконка Apple" width="47" height="56")
           li
-            img.banner__brand-item.brand__android(src="../img/svg/logo-android.svg" alt="иконка Anrdoid" width="43" height="47")
+            a.brand__link
+              img.banner__brand-item.brand__android(src="../img/svg/logo-android.svg" alt="иконка Anrdoid" width="43" height="47")
           li
-            img.banner__brand-item.brand__windows(src="../img/svg/logo-windows.svg" alt="иконка Windows" width="44" height="41")
+            a.brand__link
+              img.banner__brand-item.brand__windows(src="../img/svg/logo-windows.svg" alt="иконка Windows" width="44" height="41")
         p.banner__text Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows8
 
     section.features
       h2.visually-hidden Преимущества приложения
       p.features__slogan Устали от серости мегаполиса?
       p.features__slogan Нам есть, что вам
-       span.features__slogan--br предложить!
+        span.features__slogan--br предложить!
       .features__block
         ul.features__list-img
           li.features__item.features__item--first
@@ -65,46 +65,113 @@ block content
             p.review__age 25 лет, водитель трамвая
       .nav-arrow.nav-arrow--left
       .nav-arrow.nav-arrow--right
-      p.comment-page.comment__comment-page
-        input.comment-page__item(type="radio", name="toggle" id="pag1" checked)
-        label.comment-page__label(for="pag1")
-        input.comment-page__item(type="radio", name="toggle" id="pag2")
-        label.comment-page__label(for="pag2")
-        input.comment-page__item(type="radio", name="toggle" id="pag3")
-        label.comment-page__label(for="pag3")
+      p.control.control--comment
+        input.control__item(type="radio", name="comment" id="comment_1" checked)
+        label.control__label(for="comment_1")
+        input.control__item(type="radio", name="comment" id="comment_2")
+        label.control__label(for="comment_2")
+        input.control__item(type="radio", name="comment" id="comment_3")
+        label.control__label(for="comment_3")
 
-    section.price
-    h2.visually-hidden Цены на приложение
-    table
-      tr
-        td <!-- пустя ячейка -->
-        td База 1,99 USD
-        td Стандарт 3.99 USD
-        td Анлим 9,99 USD
-      tr
-        td Розовый фильтр
-        td
-          span.visually-hidden Да
-        td
-          span.visually-hidden Да
-        td
-          span.visually-hidden Да
-      tr
-        td Смайлики
-        td
-          span.visually-hidden Нет
-        td
-          span.visually-hidden Да
-        td
-          span.visually-hidden Да
-      tr
-        td Комментарии
-        td
-          span.visually-hidden Нет
-        td
-          span.visually-hidden Нет
-        td
-          span.visually-hidden Да
+    section.price.price--mobile
+      h2.visually-hidden Цены на приложение
+
+      table.price__table.price__table--mobile.price--margin
+        thead.price__table-head
+          tr.price__table-row
+            th.price__table-cell--hide
+            th.price__table-cell#slide_1
+              span.price__table-tariff База
+              span.price__table-cost 1,99 USD
+            th.price__table-cell.price__table-cell--hit#slide_2
+              img.price__table-hit(src="img/svg/hit.svg", alt="хит продаж" width="74" height="73")
+              span.price__table-tariff Стандарт
+              span.price__table-cost 3.99 USD
+            th.price__table-cell#slide_3
+              span.price__table-tariff Анлим
+              span.price__table-cost 9,99 USD
+        tbody.price__table-body
+          tr.price__table-row
+            td.price__table-cell.price__table-cell--mobile Розовый фильтр
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Розовый фильтр
+                img(src="../img/svg/yes.svg", alt="Да" width="31" height="21")
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Розовый фильтр
+                img(src="../img/svg/yes.svg", alt="Да" width="31" height="21")
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Розовый фильтр
+                img(src="../img/svg/yes.svg", alt="Да" width="31" height="21")
+          tr.price__table-row
+            td.price__table-cell.price__table-cell--mobile Смайлики
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Смайлики
+                img(src="../img/svg/no.svg", alt="Нет" width="27" height="26")
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Смайлики
+                img(src="../img/svg/yes.svg", alt="Да" width="31" height="21")
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Смайлики
+                img(src="../img/svg/yes.svg", alt="Да" width="31" height="21")
+          tr.price__table-row
+            td.price__table-cell.price__table-cell--mobile Комментарии
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Комментарии
+                img(src="../img/svg/no.svg", alt="Нет" width="27" height="26")
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Комментарии
+                img(src="../img/svg/no.svg", alt="Нет" width="27" height="26")
+            td.price__cell-wrapper
+              .price__table-cell.price__table-cell--inner
+                span.price__table-opt Комментарии
+                img(src="../img/svg/yes.svg", alt="Да" width="31" height="21")
+
+      p.control.control--price
+        input.control__item(type="radio", name="price" id="price_1")
+        label.control__label(for="price_1")
+        input.control__item(type="radio", name="price" id="price_2" checked)
+        label.control__label(for="price_2")
+        input.control__item(type="radio", name="price" id="price_3")
+        label.control__label(for="price_3")
+
+      table.price__table.price__table--big-screen
+        tr
+          th <!-- пустя ячейка -->
+          th База 1,99 USD
+          th Стандарт 3.99 USD
+          th Анлим 9,99 USD
+        tr
+          td Розовый фильтр
+          td
+            span.visually-hidden Да
+          td
+            span.visually-hidden Да
+          td
+            span.visually-hidden Да
+        tr
+          td Смайлики
+          td
+            span.visually-hidden Нет
+          td
+            span.visually-hidden Да
+          td
+            span.visually-hidden Да
+        tr
+          td Комментарии
+          td
+            span.visually-hidden Нет
+          td
+            span.visually-hidden Нет
+          td
+            span.visually-hidden Да
 
     section.contacts
       h2.visually-hidden Как с нами связаться

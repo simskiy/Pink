@@ -1,0 +1,155 @@
+.price {
+  height: 470px;
+  background: url("../img/svg/triangle-bg.svg") no-repeat;
+  background-color: $bgColor-light;
+  background-position: top;
+  overflow: hidden;
+}
+
+.price--mobile {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+}
+
+.price__table {
+  border-spacing: 2px;
+}
+
+.price__table--mobile {
+  position: absolute;
+  top: 70px;
+  left: calc(-100vw - 4px);
+  border: transparent;
+  transition: left 0.5s ease-out;
+}
+
+th.price__table-cell {
+  background-color: $mainColor;
+  color: #ffffff;
+}
+
+.price__table-row {
+  width: 100%;
+}
+
+.price__cell-wrapper {
+  padding: 0;
+}
+
+.price__table-cell {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: transparent;
+}
+
+.price__table-cell--hide,
+.price__table-cell--mobile {
+  display: none;
+}
+
+.price__table-cell--hit {
+  position: relative;
+}
+
+.price__table-hit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 74px;
+  height: 73px;
+}
+
+.price__table-tariff {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price__table-cost {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.price__table-body {
+  background-color: #ffffff;
+}
+
+.price__table-cell--inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.control--price {
+  margin-bottom: 55px;
+}
+
+.price__table--big-screen {
+  display: none;
+}
+
+@include media-tablet {
+  .price {
+    height: 375px;
+  }
+
+  .price__table {
+    margin-top: 90px;
+    position: static;
+    color: $mainColor;
+  }
+
+  .price--mobile {
+    flex-direction: column;
+  }
+
+  .price--margin {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .price__table-tariff {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  .price__table-cost {
+    font-size: 18px;
+  }
+
+  .price__table-cell {
+    width: auto;
+    padding: 12px;
+    line-height: 20px;
+    text-transform: capitalize;
+  }
+
+  .price__table-cell--hide {
+    display: table-cell;
+  }
+
+  .price__table-cell--header {
+    display: hidden;
+  }
+
+  .price__table-cell--inner {
+    justify-content: space-around;
+  }
+
+  .price__table-opt {
+    display: none;
+  }
+
+  .control--price {
+    display: none;
+  }
+
+  .price__table-hit {
+    width: 61px;
+    height: 61px;
+  }
+}

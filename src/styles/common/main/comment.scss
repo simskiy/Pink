@@ -37,18 +37,18 @@
   margin: 0;
 }
 
-.comment-page {
+.control {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.comment__comment-page {
+.control--comment {
   margin-top: 40px;
   margin-bottom: 45px;
 }
 
-.comment-page__label {
+.control__label {
   display: block;
   width: 5px;
   height: 5px;
@@ -67,10 +67,10 @@
   }
 }
 
-.comment-page__item {
+.control__item {
   display: none;
 
-  &:checked + .comment-page__label {
+  &:checked + .control__label {
     background-color: #ffffff;
     box-shadow: 0 0 0 3px $mainColor;
     opacity: 1;
@@ -104,7 +104,7 @@
     color: $mainColor;
   }
 
-  .comment__comment-page {
+  .control--comment {
     margin-bottom: 25px;
   }
 }
@@ -133,7 +133,7 @@
     font-size: 18px;
   }
 
-  .comment-page {
+  .control {
     display: none;
   }
 

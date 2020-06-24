@@ -8,6 +8,20 @@ const menu = document.querySelector(`.main-nav__list`);
 const navTop = document.querySelector(`.main-nav__top`);
 const mainNav = document.querySelector(`.main-nav`);
 
+const sliderControl = document.querySelectorAll(`.control__item[id^="price_"]`);
+const slider = document.querySelector(`.price__table`);
+
+const sliders = {
+  "price_1": `slide_1`,
+  "price_2": `slide_2`,
+  "price_3": `slide_3`,
+};
+
+function toggleSlider() {
+  const nextSlider = document.querySelector(`#${sliders[this.id]}`);
+  slider.style.left = `-${nextSlider.offsetLeft}px`;
+}
+
 function showMenu() {
   navTop.classList.toggle(`main-nav__top--opacity`);
   closeMenu.classList.toggle(`main-nav__close--hidden`);
@@ -25,6 +39,10 @@ function showMenu() {
 
 function hideMenu() {
   menu.classList.add(`main-nav__list--close-hidden`);
+}
+
+for (const item of sliderControl) {
+  item.addEventListener(`click`, toggleSlider);
 }
 
 btn.addEventListener(`click`, showMenu);
