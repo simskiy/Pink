@@ -124,11 +124,13 @@ th.price__table-cell {
   .price__table-cell {
     width: auto;
     padding: 12px;
+    font-size: 14px;
     line-height: 20px;
     text-transform: capitalize;
   }
 
-  .price__table-cell--hide {
+  .price__table-cell--hide,
+  .price__table-cell--mobile {
     display: table-cell;
   }
 
@@ -152,4 +154,38 @@ th.price__table-cell {
     width: 61px;
     height: 61px;
   }
+}
+
+@include media-desktop {
+  .price {
+    height: 530px;
+  }
+
+  .price__table {
+    margin-top: 150px;
+  }
+
+  .price__table-cell {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .price--margin {
+    margin-left: 130px;
+    margin-right: 130px;
+  }
+
+  .price__table-tariff {
+    font-size: 18px;
+  }
+
+  .price__table-cost {
+    font-size: 24px;
+  }
+
+  .price__table-cell {
+    line-height: 30px;
+  }
+
+
 }

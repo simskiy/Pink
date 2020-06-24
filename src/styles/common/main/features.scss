@@ -130,6 +130,15 @@
   .jog__link {
     color: $redColor;
     font-size: 14px;
+
+    &:hover {
+      color: $mainColor;
+    }
+
+    &:active {
+      color: $mainColor;
+      opacity: 0.3;
+    }
   }
 }
 
