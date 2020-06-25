@@ -88,10 +88,6 @@ th.price__table-cell {
   margin-bottom: 55px;
 }
 
-.price__table--big-screen {
-  display: none;
-}
-
 @include media-tablet {
   .price {
     height: 375px;
