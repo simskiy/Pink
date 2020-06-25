@@ -65,6 +65,14 @@
   &:last-of-type {
     margin-right: auto;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .control__item {
