@@ -1,0 +1,108 @@
+.page-footer {
+  display: none;
+}
+
+@include media-tablet {
+  .page-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 127px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .social-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 177px;
+    max-width: 177px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-list__item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    border: 3px solid rgba($mainColor, 0.1);
+    cursor: pointer;
+    fill: $redColor;
+
+    &:hover {
+      border-color: $mainColor;
+    }
+
+    &:active {
+      border-color: rgba($mainColor, 0.3);
+      opacity: 0.3;
+    }
+  }
+
+  .logoFooter {
+    fill: $mainColor;
+
+    &:hover {
+      fill: $redColor;
+    }
+
+    &:active {
+      fill: $mainColor;
+      opacity: 0.3;
+    }
+  }
+
+  .dev-list__img {
+    fill: $redColor;
+
+    &:hover {
+      fill: $mainColor;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .dev-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 130px;
+    max-width: 130px;
+  }
+
+  .dev-list__item {
+    color: $mainColor;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .dev-list__link {
+    position: relative;
+    top: 5px;
+  }
+}
+
+@include media-desktop {
+  .page-footer {
+    height: 197px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .dev-list {
+    min-width: 152px;
+    max-width: 152px;
+  }
+
+  .dev-list__item {
+    font-size: 18px;
+  }
+}

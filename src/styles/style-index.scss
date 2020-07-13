@@ -1,0 +1,23 @@
+body {
+  position: relative;
+  margin: 0;
+  padding-left: calc((100% - 1200px) / 2);
+  padding-right: calc((100% - 1200px) / 2);
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+  min-width: 265px;
+}
+
+@import "mixins/mixins";
+
+@import "utils/variables";
+
+@import "utils/fonts";
+
+@import "utils/global";
+
+
+@import "common/header";
+
+@import "common/main";
+
+@import "common/footer-index";

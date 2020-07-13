@@ -3,6 +3,19 @@ extends common/layout
 block var
   -var title = 'Главная страница'
 
+block append head
+  link(rel="stylesheet", href="css/style-index.css")
+
+block append link-list
+    li.site-list__item
+      a.site-list__link(href="") Главная
+    li.site-list__item
+      a.site-list__link(href="photo.html") Фотографии
+    li.site-list__item
+      a.site-list__link(href="") Конкурс
+    li.site-list__item
+      a.site-list__link(href="") HTML Academy
+
 block content
   main.main-content
     h1.visually-hidden Пинк
@@ -76,7 +89,7 @@ block content
     section.price.price--mobile
       h2.visually-hidden Цены на приложение
 
-      table.price__table.price__table--mobile.price--margin
+      table.price__table.price__table--mobile
         thead.price__table-head
           tr.price__table-row
             th.price__table-cell--hide

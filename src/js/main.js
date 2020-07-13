@@ -11,6 +11,9 @@ const mainNav = document.querySelector(`.main-nav`);
 const sliderControl = document.querySelectorAll(`.control__item[id^="price_"]`);
 const slider = document.querySelector(`.price__table`);
 
+const body = document.body;
+const use = document.querySelector(".logoFooter").children[0];
+
 const sliders = {
   "price_1": `slide_1`,
   "price_2": `slide_2`,
@@ -46,3 +49,15 @@ for (const item of sliderControl) {
 }
 
 btn.addEventListener(`click`, showMenu);
+
+window.addEventListener('resize', changeLogoFooter);
+window.addEventListener('load', changeLogoFooter);
+
+function changeLogoFooter(event) {
+  if (body.clientWidth >= 660 && body.clientWidth < 1024) {
+    use.attributes[0].value = "img/svg/sprite.svg#logoFooterTablet";
+  }
+  if (body.clientWidth >= 1024) {
+    use.attributes[0].value = "img/svg/sprite.svg#logoFooterDesktop";
+  }
+}

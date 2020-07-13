@@ -1,0 +1,43 @@
+.photo-content__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 235px;
+  background: url("../img/mobile/photo/back-mobile-jpg.png") no-repeat;
+  background-size: cover;
+  padding-right: 76px;
+  padding-left: 76px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.photo-content__header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 185px;
+  padding-right: 40px;
+  padding-left: 40px;
+  line-height: 2.14;
+  color: $mainColor;
+  font-weight: normal;
+}
+
+.gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery__block {
+  margin: 0;
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

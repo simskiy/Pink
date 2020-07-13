@@ -1,15 +1,22 @@
 footer.page-footer
   a.page-footer__link(href="http://#")
-    img.page-footer__img(src="#", alt="Логотип Pink")
-
+    svg.logoFooter(width=147, height=40)
+      use(xlink:href="")
   ul.social-list
     li.social-list__item.social-icon
-      img.social-icon__img(src="#", alt="Твитер")
+      a
+        svg.twitter(width=18, height=14)
+          use(xlink:href="img/svg/sprite.svg#twitter")
     li.social-list__item.social-icon
-      img.social-icon__img(src="#", alt="Фейсбук")
+      a
+        svg.facebook(width=9, height=18)
+          use(xlink:href="img/svg/sprite.svg#facebook")
     li.social-list__item.social-icon
-      img.social-icon__img(src="#", alt="Ютуб")
-
-  ul.dev-list
-    li.dev-list__item Разработано
-      img.dev-list__img(src="#" alt="HTML Academy")
+      a
+        svg.youtube(width=15, height=13)
+          use(xlink:href="img/svg/sprite.svg#youtube")
+  .dev-list
+    span.dev-list__item Разработано
+    a.dev-list__link(href="https://htmlacademy.ru")
+      svg.dev-list__img(width=27, height=34)
+        use(xlink:href="img/svg/sprite.svg#htmlAcademy")
