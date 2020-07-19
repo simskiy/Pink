@@ -9,12 +9,10 @@ const fonts = require('./gulp/tasks/fonts')
 const imageMinify = require('./gulp/tasks/imageMinify')
 const clean = require('./gulp/tasks/clean')
 const minjs = require('./gulp/tasks/minjs')
-// const copyDependencies = require('./gulp/tasks/copyDependencies')
+const copyDependencies = require('./gulp/tasks/copyDependencies')
 const lighthouse = require('./gulp/tasks/lighthouse')
 const svgSprite = require('./gulp/tasks/svgSprite')
 const copyImg = require('./gulp/tasks/copyImg')
-
-// let prettyHTML = true;
 
 function setMode(isProduction = false) {
   return cb => {
@@ -34,7 +32,7 @@ const dev = gulp.parallel(styles, script, fonts)
 const build = gulp.series(clean, dev)
 
 module.exports.svg = gulp.series(svgSprite)
-module.exports.start = gulp.series(setMode(), setHTML(), build, copyImg, serve)
-module.exports.prod = gulp.series(setMode(true), setHTML(false), build, imageMinify, minCss, minjs)
+module.exports.start = gulp.series(setMode(), setHTML(), build, copyImg, copyDependencies, serve)
+module.exports.prod = gulp.series(setMode(true), setHTML(false), build, imageMinify, minCss, minjs, copyDependencies)
 module.exports.dev = gulp.series(setMode(), serve)
 module.exports.lighthouse = gulp.series(lighthouse)

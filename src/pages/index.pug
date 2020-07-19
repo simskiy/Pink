@@ -79,11 +79,11 @@ block content
       .nav-arrow.nav-arrow--left
       .nav-arrow.nav-arrow--right
       p.control.control--comment
-        input.control__item(type="radio", name="comment" id="comment_1" checked)
+        input#comment_1.control__item(type="radio", name="comment" checked)
         label.control__label(for="comment_1")
-        input.control__item(type="radio", name="comment" id="comment_2")
+        input#comment_2.control__item(type="radio", name="comment")
         label.control__label(for="comment_2")
-        input.control__item(type="radio", name="comment" id="comment_3")
+        input#comment_3.control__item(type="radio", name="comment")
         label.control__label(for="comment_3")
 
     section.price.price--mobile
@@ -93,14 +93,14 @@ block content
         thead.price__table-head
           tr.price__table-row
             th.price__table-cell--hide
-            th.price__table-cell#slide_1
+            th#slide_1.price__table-cell
               span.price__table-tariff База
               span.price__table-cost 1,99 USD
-            th.price__table-cell.price__table-cell--hit#slide_2
+            th#slide_2.price__table-cell.price__table-cell--hit
               img.price__table-hit(src="img/svg/hit.svg", alt="хит продаж" width="74" height="73")
               span.price__table-tariff Стандарт
               span.price__table-cost 3.99 USD
-            th.price__table-cell#slide_3
+            th#slide_3.price__table-cell
               span.price__table-tariff Анлим
               span.price__table-cost 9,99 USD
         tbody.price__table-body
@@ -148,11 +148,11 @@ block content
                 img(src="../img/svg/yes.svg", alt="Да" width="31" height="21")
 
       p.control.control--price
-        input.control__item(type="radio", name="price" id="price_1")
+        input#price_1.control__item(type="radio", name="price")
         label.control__label(for="price_1")
-        input.control__item(type="radio", name="price" id="price_2" checked)
+        input#price_2.control__item(type="radio", name="price")
         label.control__label(for="price_2")
-        input.control__item(type="radio", name="price" id="price_3")
+        input#price_3.control__item(type="radio", name="price")
         label.control__label(for="price_3")
 
     section.contacts

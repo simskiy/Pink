@@ -21,6 +21,7 @@
   height: 185px;
   padding-right: 40px;
   padding-left: 40px;
+  text-align: center;
   line-height: 2.14;
   color: $mainColor;
   font-weight: normal;
@@ -34,10 +35,238 @@
 
 .gallery__block {
   margin: 0;
+  background-clip: content-box;
+  background-color: $bgColor-light;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
 }
 
-.gallery__image {
+.gallery__review {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 17px;
+  line-height: 24px;
+  color: $mainColor;
+}
+
+.gallery__image img {
+  display: block;
+}
+
+.review__name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.review__time {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.review__like {
+  display: inline-block;
+  position: relative;
+  left: 33px;
+  order: 1;
+  margin-top: 10px;
+  width: calc(100% - 33px);
+  text-transform: uppercase;
+  color: $redColor;
+  font-size: 12px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: -33px;
+    width: 13px;
+    height: 12px;
+    background: url("../img/svg/heart.svg") no-repeat;
+    content: "";
+  }
+}
+
+.review__text {
+  margin: 0;
+  font-size: 14px;
+}
+
+.review--photo-day {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  background-color: $bgColor-light;
+
+  .review__head,
+  .review__like,
+  .review__text {
+    padding: 0;
+  }
+}
+
+.photo-content__slogan {
+  text-align: center;
+  line-height: 30px;
+  color: $mainColor;
+  font-size: 14px;
+}
+
+.photo-filter {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.photo-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photo-form__input {
+  display: none;
+}
+
+.filter-img {
+  display: block;
+  opacity: 0.3;
+  width: 44px;
+  height: 44px;
+  fill: $mainColor;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+    fill: $redColor;
+  }
+}
+
+.photo-form__input:checked + label .filter-img {
+  opacity: 1;
+  fill: $redColor;
+}
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: auto;
-  object-fit: contain;
+}
+
+.radio-block {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.range-block {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.photo-form__range {
+  width: 100%;
+}
+
+.btn-block {
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.btn-block__button {
+  height: 55px;
+  outline: none;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-block__button--submit {
+  border-color: $redColor;
+  color: $redColor;
+
+  &:hover {
+    background-color: $redColor;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: $redColor;
+    color: rgba(#ffffff, 0.3);
+  }
+}
+
+.btn-block__button--cancel {
+  border-color: rgba($mainColor, 0.1);
+  background-color: #ffffff;
+  color: rgba($mainColor, 0.1);
+
+  &:hover {
+    border-color: rgba($mainColor, 0.3);
+    color: rgba($mainColor, 0.3);
+  }
+
+  &:active {
+    border: none;
+    background-color: rgba($mainColor, 0.3);
+    color: rgba(#ffffff, 0.3);
+  }
+}
+
+@include media-tablet {
+  .photo-content__header {
+    height: 440px;
+    background: url("../img/tablet/photo/back-tablet.jpg") no-repeat;
+    background-size: cover;
+    padding-right: 156px;
+    padding-left: 156px;
+    font-size: 50px;
+    font-weight: 300;
+  }
+
+  .photo-content__header-text {
+    height: 230px;
+    padding-right: 110px;
+    padding-left: 110px;
+    line-height: 30px;
+    font-size: 18px;
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .gallery__item {
+    flex-basis: 300px;
+  }
+
+  .gallery__block {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .gallery__review {
+    box-sizing: border-box;
+    height: 155px;
+  }
 }

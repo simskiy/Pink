@@ -8,6 +8,6 @@ module.exports = function svgSprite() {
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('src/img/svg'))
+    .pipe(gulp.dest('src/img/sprite/out'))
 }
 
