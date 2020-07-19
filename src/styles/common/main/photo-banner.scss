@@ -27,6 +27,28 @@
   font-weight: normal;
 }
 
+.gallery__item--photo-day {
+  position: relative;
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 140px;
+    height: 36px;
+    background-color: $redColor;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 36px;
+    letter-spacing: normal;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    content: "Панорама дня";
+  }
+}
+
 .gallery {
   margin: 0;
   padding: 0;
@@ -116,67 +138,104 @@
   font-size: 14px;
 }
 
+// -- photo-filter -- //
 .photo-filter {
+  background-color: $bgColor-light;
+}
+
+.img-filter img {
+  box-sizing: border-box;
+  display: block;
+  padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.photo-form {
+.filter-block {
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.photo-form__input {
-  display: none;
+  position: relative;
+  justify-content: space-around;
+  width: 100%;
+  height: 160px;
+  border-bottom: 1px solid rgba($mainColor, 0.1);
+  padding-top: 42px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .filter-img {
-  display: block;
-  opacity: 0.3;
-  width: 44px;
-  height: 44px;
-  fill: $mainColor;
+  fill: rgba($mainColor, 0.3);
   cursor: pointer;
 
   &:hover {
-    opacity: 0.5;
+    fill: rgba($mainColor, 0.5);
   }
 
   &:active {
-    opacity: 1;
     fill: $redColor;
   }
 }
 
-.photo-form__input:checked + label .filter-img {
-  opacity: 1;
+.filter-img--active {
   fill: $redColor;
 }
 
-.filter-block {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.filter-block__input {
+  display: none;
+  position: absolute;
+  bottom: 34px;
+  left: 12.5vw;
+  width: 75vw;
+  outline: none;
+  background-color: $bgColor-light;
+  appearance: none;
+
+  &::-webkit-slider-runnable-track {
+    height: 2px;
+    background-color: $mainColor;
+  }
+
+  &::-moz-range-track {
+    height: 2px;
+    background-color: $mainColor;
+  }
+
+  &::-webkit-slider-thumb {
+    position: relative;
+    bottom: 6px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid $redColor;
+    border-radius: 50%;
+    background-color: $bgColor-light;
+    cursor: pointer;
+    appearance: none;
+
+    &:active {
+      background-color: $redColor;
+    }
+  }
+
+  &::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border: 2px solid $redColor;
+    border-radius: 50%;
+    background-color: $bgColor-light;
+    cursor: pointer;
+
+    &:active {
+      background-color: $redColor;
+    }
+  }
 }
 
-.radio-block {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.filter-block__input--active {
+  display: block;
 }
 
-.range-block {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.photo-form__range {
-  width: 100%;
-}
-
+// -- btn-block -- //
 .btn-block {
   box-sizing: border-box;
   display: flex;
@@ -185,7 +244,9 @@
   justify-content: space-between;
   height: 200px;
   padding-top: 40px;
+  padding-right: 20px;
   padding-bottom: 40px;
+  padding-left: 20px;
 }
 
 .btn-block__button {

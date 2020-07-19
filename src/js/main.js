@@ -50,14 +50,49 @@ for (const item of sliderControl) {
 
 btn.addEventListener(`click`, showMenu);
 
+//--------------------------------------------
+
 window.addEventListener('resize', changeLogoFooter);
 window.addEventListener('load', changeLogoFooter);
 
 function changeLogoFooter(event) {
-  if (body.clientWidth >= 660 && body.clientWidth < 1024) {
+
+  if (body.clientWidth < 1024) {
     use.attributes[0].value = "img/svg/sprite.svg#logoFooterTablet";
   }
   if (body.clientWidth >= 1024) {
     use.attributes[0].value = "img/svg/sprite.svg#logoFooterDesktop";
+  }
+}
+
+// --------------------------------------------
+
+const filterLabel = document.querySelectorAll(".filter-img");
+
+for (label of filterLabel) {
+  label.addEventListener('click', setActiveInput);
+  label.addEventListener('touchstart', setActiveInput);
+}
+
+function setActiveInput() {
+  const currentActiveLabel = document.querySelector('.filter-img--active');
+  const currentActiveInput = document.querySelector('.filter-block__input--active');
+  const currentInput = document.querySelector(`#${this.attributes.for.value}`);
+  currentActiveLabel.classList.remove('filter-img--active');
+  currentActiveInput.classList.remove('filter-block__input--active');
+  this.classList.add('filter-img--active');
+  currentInput.classList.add('filter-block__input--active');
+}
+
+// ------------------------------------------
+
+const btnCancel = document.querySelector('.btn-block__button--cancel');
+const filterInput = document.querySelectorAll('.filter-block__input');
+btnCancel.addEventListener('click', cancelForm);
+
+function cancelForm(event) {
+  event.preventDefault();
+  for (input of filterInput) {
+    input.value = 50;
   }
 }

@@ -14,8 +14,8 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  min-width: 177px;
-  max-width: 177px;
+  min-width: 172px;
+  max-width: 172px;
   padding: 0;
 }
 
@@ -55,6 +55,7 @@
 }
 
 .dev-list__img {
+  margin-left: 15px;
   fill: $redColor;
 
   &:hover {
@@ -71,14 +72,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  // width: 100%;
   padding-right: 95px;
   padding-left: 95px;
 }
 
 .dev-list__item {
-  position: relative;
-  top: 5px;
+  align-items: center;
   color: $mainColor;
   font-size: 14px;
   font-weight: 400;
@@ -86,6 +86,8 @@
 
 @include media-tablet {
   .page-footer {
+    box-sizing: border-box;
+    flex-direction: row;
     height: 127px;
     padding-right: 20px;
     padding-left: 20px;
@@ -94,6 +96,12 @@
   .dev-list {
     min-width: 130px;
     max-width: 130px;
+    padding: 0;
+  }
+
+  .dev-list__link {
+    position: relative;
+    top: 5px;
   }
 }
 

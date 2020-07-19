@@ -99,22 +99,25 @@ block content
       +img-picture-filter('7')
       form.photo-form(action="")
         .filter-block
-          .radio-block
-            input#crop.photo-form__input(type="radio", name="img-filter" checked)
-            label(for="crop")
-              svg.filter-img.filter-img--crop
+
+          .filter-block__wrapper
+            label.filter-img.filter-img--active(for="crop")
+              svg(width="44" height="44")
                 use(xlink:href="img/svg/sprite-filter.svg#crop")
-            input#fill.photo-form__input(type="radio", name="img-filter")
-            label(for="fill")
-              svg.filter-img.filter-img--fill
+            input#crop.filter-block__input.filter-block__input--active(type="range", name="crop" min="0" max="100" value="50" step="1")
+
+          .filter-block__wrapper
+            label.filter-img(for="fill")
+              svg(width="44" height="44")
                 use(xlink:href="img/svg/sprite-filter.svg#fill")
-            input#contrast.photo-form__input(type="radio", name="img-filter")
-            label(for="contrast")
-              svg.filter-img.filter-img--contrast
+            input#fill.filter-block__input(type="range", name="fill" min="0" max="100" value="50" step="1")
+
+          .filter-block__wrapper
+            label.filter-img(for="contrast")
+              svg(width="44" height="44")
                 use(xlink:href="img/svg/sprite-filter.svg#contrast")
-          .range-block
-            input#range.photo-form__range(type="range", name="range" min="0" max="100" value="50")
-            label.visually-hidden(for="range") выберите диапазон
-          .btn-block
-            button.btn-block__button.btn-block__button--submit(type="submit") Запостить
-            button.btn-block__button.btn-block__button--cancel Отменить
+            input#contrast.filter-block__input(type="range", name="contrast" min="0" max="100" value="50" step="1")
+
+        .btn-block
+          button.btn-block__button.btn-block__button--submit(type="submit") Запостить
+          button.btn-block__button.btn-block__button--cancel Отменить
