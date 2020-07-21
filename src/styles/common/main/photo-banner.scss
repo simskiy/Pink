@@ -132,6 +132,13 @@
 }
 
 .photo-content__slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 172px;
+  padding-right: 35px;
+  padding-left: 35px;
   text-align: center;
   line-height: 30px;
   color: $mainColor;
@@ -315,6 +322,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: auto;
+    max-width: 940px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 
   .gallery__item {
@@ -328,6 +339,81 @@
 
   .gallery__review {
     box-sizing: border-box;
+    margin: auto;
+    max-width: 940px;
     height: 155px;
+  }
+
+  .photo-content__slogan {
+    height: 184px;
+    font-size: 18px;
+  }
+
+  .photo-filter {
+    display: flex;
+    align-items: center;
+    height: 511px;
+  }
+
+  .img-filter img {
+    display: block;
+    width: 300px;
+    height: 400px;
+    padding-top: 0;
+    padding-right: 10px;
+    padding-left: 3vw;
+  }
+
+  .photo-form {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    // height: 77.5vw;
+    padding-top: 67px;
+    padding-right: 38px;
+    padding-left: 35px;
+  }
+
+  .filter-block {
+    display: flex;
+    flex-direction: column;
+    height: 215px;
+    border: none;
+    padding: 0;
+  }
+
+  .filter-img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .filter-block__input {
+    display: block;
+    position: static;
+    padding-left: 30px;
+  }
+
+  .filter-block__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 72px;
+    max-height: 72px;
+    border-bottom: 1px solid rgba($mainColor, 0.1);
+  }
+
+  .btn-block {
+    height: 200px;
+    padding: 0;
+  }
+
+  .btn-block__button--submit {
+    margin-top: 67px;
+  }
+}
+
+@include media-desktop {
+  .gallery {
+    justify-content: space-between;
   }
 }
