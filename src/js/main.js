@@ -26,7 +26,9 @@ const imgFilter = document.querySelector('.img-filter');
 btn.addEventListener(`click`, showMenu);
 window.addEventListener('resize', changeLogoFooter);
 window.addEventListener('load', changeLogoFooter);
-btnCancel.addEventListener('click', cancelForm);
+if (btnCancel) {
+  btnCancel.addEventListener('click', cancelForm);
+}
 
 for (const item of sliderControl) {
   item.addEventListener(`click`, toggleSlider);
@@ -67,22 +69,23 @@ function hideMenu() {
 
 function changeLogoFooter(event) {
 
-  if (body.clientWidth < 1024) {
+  if (body.clientWidth < 1200) {
     use.attributes[0].value = "img/svg/sprite.svg#logoFooterTablet";
   }
-  if (body.clientWidth >= 1024) {
+  if (body.clientWidth >= 1200) {
     use.attributes[0].value = "img/svg/sprite.svg#logoFooterDesktop";
   }
-  if (body.clientWidth < 660) {
+  if (body.clientWidth > 659 && body.clientWidth < 1200) {
     changeWidthIco("min");
-  }
-  if (body.clientWidth >= 660) {
-    changeWidthIco("max");
-  }
+  } else changeWidthIco("max");
+
+  // if (body.clientWidth >= 660 && body.clientWidth <= 1200) {
+  // changeWidthIco("max");
+  // }
 }
 
 function changeWidthIco(set) {
-  let size = set == "min" ? 44 : 22;
+  let size = set == "min" ? 22 : 44;
   for (label of filterLabel) {
     label.children[0].attributes[0].value = size;
     label.children[0].attributes[1].value = size;

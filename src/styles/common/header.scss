@@ -28,20 +28,20 @@
 }
 
 .main-nav__top {
-  display: flex;
   box-sizing: border-box;
-  height: 70px;
-  padding-left: 20px;
-  padding-right: 20px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $mainColor;
+  height: 70px;
   border-bottom: 1px solid hsl(0, 0%, 0%);
+  background-color: $mainColor;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .main-nav__top--opacity {
-  background-color: rgba($mainColor, 0.7);
   border: none;
+  background-color: rgba($mainColor, 0.7);
 }
 
 .no-js .main-nav__top--opacity {
@@ -58,19 +58,19 @@
   }
 
   &:active {
-    background: url("../img/mobile/logo-mobile.svg") no-repeat;
     opacity: 0.3;
+    background: url("../img/mobile/logo-mobile.svg") no-repeat;
   }
 }
 
 .main-nav__toggle {
-  padding: 0;
   margin: 0;
-  border: none;
   outline: none;
+  border: none;
   background: transparent;
-  cursor: pointer;
   fill: #ffffff;
+  padding: 0;
+  cursor: pointer;
 }
 
 .main-nav__close {
@@ -95,19 +95,19 @@
 
 .main-nav__close:active,
 .main-nav__open:active {
-  fill: #ffffff;
   opacity: 0.3;
+  fill: #ffffff;
 }
 
 .main-nav__list {
+  box-sizing: border-box;
+  display: flex;
   position: absolute;
   top: 70px;
   right: 1px;
-  width: 100%;
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
   background-color: $mainColor;
 }
 
@@ -140,30 +140,30 @@
 }
 
 .site-list__item {
-  height: 63px;
-  width: 100%;
   box-sizing: border-box;
-  font-size: 18px;
-  text-transform: uppercase;
-  text-align: center;
-  border-bottom: 1px solid #000000;
+  width: 100%;
+  height: 63px;
   border-top: 1px solid $greyColor;
+  border-bottom: 1px solid #000000;
   border-left: 1px solid $greyColor;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
 }
 
 .site-list__link {
+  text-decoration: none;
   line-height: 65px;
   color: #ffffff;
   font-weight: bold;
-  text-decoration: none;
 
   &:hover {
     color: $redColor;
   }
 
   &:active {
-    color: #ffffff;
     opacity: 0.3;
+    color: #ffffff;
   }
 }
 
@@ -182,8 +182,8 @@
     }
 
     &:active {
-      background: url("../img/tablet/logo-tablet.svg") no-repeat;
       opacity: 0.3;
+      background: url("../img/tablet/logo-tablet.svg") no-repeat;
     }
   }
 
@@ -194,20 +194,18 @@
 
 @include media-desktop {
   .page-header {
-    position: static;
-    max-width: 1200px;
-    height: 110px;
     margin: auto;
+    max-width: 1200px;
   }
 
   .main-nav {
+    box-sizing: border-box;
     display: flex;
     max-width: 1200px;
-    box-sizing: border-box;
-    padding-left: 125px;
-    padding-right: 125px;
     border: none;
     background-color: rgba($mainColor, 0.7);
+    padding-right: 125px;
+    padding-left: 125px;
   }
 
   .main-nav__logo {
@@ -218,15 +216,15 @@
     }
 
     &:active {
-      background: url("../img/desktop/logo-desktop.svg") no-repeat;
       opacity: 0.3;
+      background: url("../img/desktop/logo-desktop.svg") no-repeat;
     }
   }
 
   .main-nav__top {
-    padding: 0;
     border: none;
     background: none;
+    padding: 0;
   }
 
   .main-nav__toggle {
@@ -234,11 +232,11 @@
   }
 
   .main-nav__list {
-    position: static;
     display: flex;
-    flex-wrap: wrap;
+    position: static;
     // width: 630px;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-left: 170px;
     background: none;

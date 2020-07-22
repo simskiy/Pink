@@ -12,3 +12,4 @@ npm-debug.*
 Thumbs.db
 build/
 src/maket
+*.swp

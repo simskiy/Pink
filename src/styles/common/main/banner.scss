@@ -1,16 +1,16 @@
 .banner {
   box-sizing: border-box;
+  height: calc(144.375vw + 270px);
   background: url("../img/mobile/bg-img@x1.jpg") no-repeat;
   background-color: $bgColor;
   background-size: contain;
-  height: calc(144.375vw + 270px);
 }
 
 .banner__wrapper {
-  display: flex;
-  width: auto;
-  flex-direction: column;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: auto;
 
   @include retina-2x {
     background: url("../img/mobile/bg-img@x2.jpg") no-repeat;
@@ -30,21 +30,21 @@
 }
 
 .banner__button {
-  outline: none;
-  font-size: 18px;
-  font-weight: bold;
-  color: #ffffff;
   box-sizing: border-box;
-  border-width: 3px;
-  border-color: #ffffff;
-  border-radius: 30px;
-  background: transparent;
-  margin-left: 20px;
-  margin-right: 20px;
   margin-top: calc(144.375vw + 28px);
+  margin-right: 20px;
+  margin-left: 20px;
+  outline: none;
+  border-width: 3px;
+  border-radius: 30px;
+  border-color: #ffffff;
+  background: transparent;
   padding-top: 15px;
   padding-bottom: 15px;
   cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
 
   &:hover {
     background-color: #ffffff;
@@ -52,21 +52,21 @@
   }
 
   &:active {
+    opacity: 0.3;
     background-color: #ffffff;
     color: $redColor;
-    opacity: 0.3;
   }
 }
 
 .banner__brand-list {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  list-style: none;
+  justify-content: space-around;
   margin: 0;
-  padding: 0 20px 0 20px;
   margin-top: 40px;
   margin-bottom: 30px;
+  padding: 0 20px 0 20px;
+  list-style: none;
 }
 
 .brand__link {
@@ -74,13 +74,13 @@
 }
 
 .banner__text {
-  padding-left: 45px;
+  margin: 0;
   padding-right: 45px;
+  padding-left: 45px;
+  text-align: center;
   color: #ffffff;
   font-size: 14px;
   font-weight: 300;
-  text-align: center;
-  margin: 0;
 }
 
 @include media-tablet {
@@ -103,9 +103,9 @@
   .banner__wrapper {
     display: flex;
     justify-content: space-between;
-    height: 100%;
-    width: 300px;
     margin-left: 20px;
+    width: 300px;
+    height: 100%;
     padding-top: 210px;
     padding-bottom: 110px;
 
@@ -120,15 +120,15 @@
 
   .banner__caption {
     display: inline;
+    text-align: center;
     color: #ffffff;
     font-size: 40px;
     font-weight: 300;
-    text-align: center;
   }
 
   .banner__button {
-    width: 100%;
     margin: 0;
+    width: 100%;
   }
 
   .banner__brand-list {
@@ -137,15 +137,14 @@
   }
 
   .banner__text {
-    font-size: 18px;
     padding: 0;
+    font-size: 18px;
   }
 }
 
 @include media-desktop {
   .banner {
     height: 853px;
-    margin-top: -110px;
     background: url("../img/desktop/bg-img@x1.jpg") no-repeat;
     background-size: cover;
   }

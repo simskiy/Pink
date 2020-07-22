@@ -67,7 +67,6 @@
 
 .gallery__review {
   display: flex;
-  align-items: left;
   flex-direction: column;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -106,7 +105,7 @@
     position: absolute;
     top: 6px;
     left: -33px;
-    width: 13px;
+    width: 14px;
     height: 12px;
     background: url("../img/svg/heart.svg") no-repeat;
     content: "";
@@ -332,6 +331,11 @@
     flex-basis: 300px;
   }
 
+  .gallery__item--photo-day::after {
+    top: 57px;
+    right: 36px;
+  }
+
   .gallery__block {
     padding-right: 0;
     padding-left: 0;
@@ -339,9 +343,38 @@
 
   .gallery__review {
     box-sizing: border-box;
+    display: flex;
+    position: relative;
+    flex-direction: column;
     margin: auto;
-    max-width: 940px;
+    // max-width: 940px;
     height: 155px;
+  }
+
+  .review__like {
+    margin-top: auto;
+  }
+
+  .review--photo-day {
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 121px;
+    padding: 30px 25px;
+  }
+
+  .review__like--photo-day {
+    position: absolute;
+    top: 30px;
+    left: calc(100vw - 210px);
+    width: 100px;
+
+    &::before {
+      left: 110px;
+    }
+  }
+
+  .review__text--photo-day {
+    margin-top: auto;
   }
 
   .photo-content__slogan {
@@ -369,7 +402,6 @@
     display: flex;
     flex-direction: column;
     width: 50vw;
-    // height: 77.5vw;
     padding-top: 67px;
     padding-right: 38px;
     padding-left: 35px;
@@ -386,6 +418,7 @@
   .filter-img {
     width: 22px;
     height: 22px;
+    fill: $redColor;
   }
 
   .filter-block__input {
@@ -413,7 +446,69 @@
 }
 
 @include media-desktop {
+  .photo-content__header {
+    background: url("../img/desktop/photo/back-desktop.jpg") no-repeat;
+    background-size: 110%;
+    padding-right: 425px;
+    padding-left: 425px;
+    background-position-x: center;
+  }
+
+  .photo-content__header-text {
+    height: 240px;
+    padding-right: 315px;
+    padding-left: 315px;
+  }
+
+  .gallery__item--photo-day {
+    &::after {
+      top: 54px;
+      right: 130px;
+    }
+  }
+
+  .review--photo-day {
+    margin-right: 130px;
+    margin-left: 130px;
+    height: 96px;
+  }
+
+  .review__like--photo-day {
+    left: 790px;
+  }
+
   .gallery {
     justify-content: space-between;
+  }
+
+  .photo-form {
+    padding-right: 60px;
+    padding-left: 90px;
+  }
+
+  .photo-filter {
+    // margin-left: 44px;
+    margin: auto;
+    width: 940px;
+  }
+
+  .filter-img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .filter-block__input {
+    padding-right: 30px;
+    padding-left: 44px;
+  }
+
+  .btn-block {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .btn-block__button {
+    margin-top: 67px;
+    width: 183px;
   }
 }
