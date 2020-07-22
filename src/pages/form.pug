@@ -1,0 +1,73 @@
+extends common/layout
+
+block var
+  -var title = "Конкурс"
+
+block append head
+  link(rel="stylesheet", href="css/style.css")
+
+block append link-list
+  li.site-list__item
+    a.site-list__link(href="index.html") Главная
+  li.site-list__item
+    a.site-list__link(href="photo.html") Фотографии
+  li.site-list__item
+    a.site-list__link.site-list__link--active(href="") Конкурс
+  li.site-list__item
+    a.site-list__link(href="https://htmlacademy.ru/") HTML Academy
+
+block content
+  main.contest-content
+    h1.contest-header Конкурс на самое безбашенное путешествие с Пинк
+    p Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+    form(action="")
+      .form-name
+        label.form-name__label(for="surname") Фамилию:
+        input#sirname.form-name__input(type="text", name="surname" placeholder="Укажите фамилию *" required)
+        label.form-name__label(for="name") Имя:
+        input#name.form-name__input(type="text", name="name" placeholder="Введите ваше имя *" required)
+        label.form-name__label(for="patronymic")
+        input#patronymic.form-name__input(type="text", name="patronymic" placeholder="Ну и отчество тоже")
+      .achievement-wrapper
+        fieldset
+          legend Ваши безбашенные достижения в путешествии
+          .form-achievement
+            input#selfie(type="checkbox", name="selfie" checked)
+            label(for="selfie") Сделал селфи с акулой
+            input#suntan(type="checkbox", name="suntan" checked)
+            label(for="suntan") Обгорел на пляже
+            input#chuck(type="checkbox", name="chuck")
+            label(for="chuck") Видел Чака Норриса
+            input#souvenir(type="checkbox", name="souvenir")
+            label(for="souvenir") Накупил сувениров
+            input#tower(type="checkbox", name="tower" checked)
+            label(for="tower") Удераж башню
+            input#destroy(type="checkbox", name="destroy")
+            label(for="destroy") Разгромил отель
+      .contacts-wrapper
+        fieldset
+          legend Контактная информация
+          .form-contacts
+            label(for="phone") Номер телефона
+            input#phone(type="tel", name="phone")
+            label(for="mail") Адрес электронной почты
+            input#mail(type="email", name="mail")
+      .app-wrapper
+        fieldset
+          legend С каким приложением путшествовали
+          .form-app
+            input#ios(type="radio", name="app" checked)
+            label(for="ios") Pink для iOS
+            input#android(type="radio", name="app")
+            label(for="android") Pink для Android
+            input#win(type="radio", name="app")
+            label(for="win") Windows Phone
+      .comment-wrapper
+        fieldset
+          legend Опишите свои эмоции
+          .form-comment
+            textarea(name="comment", cols="30", rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях")
+      button(type="submit") Отправить форму
+      span.note * - обязательные поля
+
+

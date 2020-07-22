@@ -75,13 +75,9 @@ function changeLogoFooter(event) {
   if (body.clientWidth >= 1200) {
     use.attributes[0].value = "img/svg/sprite.svg#logoFooterDesktop";
   }
-  if (body.clientWidth > 659 && body.clientWidth < 1200) {
+  if (body.clientWidth >= 660 && body.clientWidth < 1200) {
     changeWidthIco("min");
   } else changeWidthIco("max");
-
-  // if (body.clientWidth >= 660 && body.clientWidth <= 1200) {
-  // changeWidthIco("max");
-  // }
 }
 
 function changeWidthIco(set) {

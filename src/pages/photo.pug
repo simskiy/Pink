@@ -2,7 +2,7 @@ extends common/layout
 include common/mixins
 
 block var
-  -var Фото
+  //- -var Фото
   -var title = "Фотографии"
 
 block append head
@@ -12,11 +12,11 @@ block append link-list
     li.site-list__item
       a.site-list__link(href="index.html") Главная
     li.site-list__item
-      a.site-list__link(href="") Фотографии
+      a.site-list__link.site-list__link--active(href="") Фотографии
     li.site-list__item
-      a.site-list__link(href="") Конкурс
+      a.site-list__link(href="form.html") Конкурс
     li.site-list__item
-      a.site-list__link(href="") HTML Academy
+      a.site-list__link(href="https://htmlacademy.ru/") HTML Academy
 
 block content
   main.photo-content

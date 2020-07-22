@@ -152,6 +152,7 @@
 }
 
 .site-list__link {
+  padding-bottom: 5px;
   text-decoration: none;
   line-height: 65px;
   color: #ffffff;
@@ -165,6 +166,10 @@
     opacity: 0.3;
     color: #ffffff;
   }
+}
+
+.site-list__link--active {
+  border-bottom: 2px solid #ffffff;
 }
 
 @include media-tablet {
