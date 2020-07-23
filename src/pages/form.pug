@@ -19,55 +19,54 @@ block append link-list
 block content
   main.contest-content
     h1.contest-header Конкурс на самое безбашенное путешествие с Пинк
-    p Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+    p.contest-header__text Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+      span.contest-header__text--hide  Пожалуйста, заполните форму ниже:
     form.contest-form(action="")
       .form-name
-        label.form-name__label(for="surname") Фамилию:
-        input#sirname.form-name__input(type="text", name="surname" placeholder="Укажите фамилию *" required)
-        label.form-name__label(for="name") Имя:
-        input#name.form-name__input(type="text", name="name" placeholder="Введите ваше имя *" required)
-        label.form-name__label(for="patronymic")
-        input#patronymic.form-name__input(type="text", name="patronymic" placeholder="Ну и отчество тоже")
+        label.contest-label.contest-label--red(for="surname") Фамилию:
+        input#sirname.contest-input.contest-input--text(type="text", name="surname" placeholder="Укажите фамилию *" required)
+        label.contest-label.contest-label--red(for="name") Имя:
+        input#name.contest-input.contest-input--text(type="text", name="name" placeholder="Введите ваше имя *" required)
+        label.contest-label.contest-label--red(for="patronymic") Отчество:
+        input#patronymic.contest-input.contest-input--text(type="text", name="patronymic" placeholder="Ну и отчество тоже")
       .achievement-wrapper
-        fieldset.achievement-fieldset
-          legend.achievement-fieldset__legend Ваши безбашенные достижения в путешествии
+        fieldset.contest-fieldset
+          legend.contest-legend Ваши безбашенные достижения в путешествии
           .form-achievement
-            input#selfie.form-achievement__input(type="checkbox", name="selfie" checked)
-            label.form-achievement__label(for="selfie") Сделал селфи с акулой
-            input#suntan.form-achievement__input(type="checkbox", name="suntan" checked)
-            label.form-achievement__label(for="suntan") Обгорел на пляже
-            input#chuck.form-achievement__input(type="checkbox", name="chuck")
-            label.form-achievement__label.(for="chuck") Видел Чака Норриса
-            input#souvenir.form-achievement__input(type="checkbox", name="souvenir")
-            label.form-achievement__label(for="souvenir") Накупил сувениров
-            input#tower.form-achievement__input(type="checkbox", name="tower" checked)
-            label.form-achievement__label(for="tower") Удераж башню
-            input#destroy.form-achievement__input(type="checkbox", name="destroy")
-            label.form-achievement__label(for="destroy") Разгромил отель
+            input#selfie.contest-input.context-input--check(type="checkbox", name="selfie" checked)
+            label.contest-label(for="selfie") Сделал селфи с акулой
+            input#suntan.contest-input.context-input--check(type="checkbox", name="suntan" checked)
+            label.contest-label(for="suntan") Обгорел на пляже
+            input#chuck.contest-input.context-input--check(type="checkbox", name="chuck")
+            label.contest-label(for="chuck") Видел Чака Норриса
+            input#souvenir.contest-input.context-input--check(type="checkbox", name="souvenir")
+            label.contest-label(for="souvenir") Накупил сувениров
+            input#tower.contest-input.context-input--check(type="checkbox", name="tower" checked)
+            label.contest-label(for="tower") Удераж башню
+            input#destroy.contest-input.context-input--check(type="checkbox", name="destroy")
+            label.contest-label(for="destroy") Разгромил отель
       .contacts-wrapper
-        fieldset.contacts-fieldset
-          legend.contacts-fieldset__legend Контактная информация
+        fieldset.contest-fieldset
+          legend.contest-legend Контактная информация
           .form-contacts
-            label.form-contacts__label(for="phone") Номер телефона
-            input#phone.form-contacts__input(type="tel", name="phone")
-            label.form-contacts__label(for="mail") Адрес электронной почты
-            input#mail.form-contacts__input(type="email", name="mail")
+            label.contest-label.contest-label--red(for="phone") Номер телефона
+            input#phone.contest-input.contest-input--text(type="tel", name="phone")
+            label.contest-label.contest-label--red(for="mail") Адрес электронной почты
+            input#mail.contest-input.contest-input--text(type="email", name="mail")
       .app-wrapper
-        fieldset.app-fieldset
-          legend.app-fieldset__legend С каким приложением путшествовали
+        fieldset.contest-fieldset
+          legend.contest-legend С каким приложением путшествовали
           .form-app
-            input#ios.form-app__input(type="radio", name="app" checked)
-            label.form-app__label(for="ios") Pink для iOS
-            input#android.form-app__input(type="radio", name="app")
-            label.form-app__label(for="android") Pink для Android
-            input#win.form-app__input(type="radio", name="app")
-            label.form-app__label(for="win") Windows Phone
+            input#ios.contest-input.contest-input--radio(type="radio", name="app" checked)
+            label.contest-label(for="ios") Pink для iOS
+            input#android.contest-input.contest-input--radio(type="radio", name="app")
+            label.contest-label(for="android") Pink для Android
+            input#win.contest-input.contest-input--radio(type="radio", name="app")
+            label.contest-label(for="win") Windows Phone
       .comment-wrapper
-        fieldset.comment-fieldset
-          legend.comment-fieldset__legend Опишите свои эмоции
+        fieldset.contest-fieldset
+          legend.contest-legend Опишите свои эмоции
           .form-comment
             textarea.form-comment__textarea(name="comment", cols="30", rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях")
       button.btn-contest(type="submit") Отправить форму
       span.note * - обязательные поля
-
-

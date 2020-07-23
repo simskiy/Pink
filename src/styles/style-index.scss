@@ -1,10 +1,10 @@
 body {
   position: relative;
   margin: 0;
-  padding-left: calc((100% - 1200px) / 2);
-  padding-right: calc((100% - 1200px) / 2);
-  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
   min-width: 265px;
+  padding-right: calc((100% - 1200px) / 2);
+  padding-left: calc((100% - 1200px) / 2);
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
 }
 
 @import "mixins/mixins";
@@ -15,9 +15,16 @@ body {
 
 @import "utils/global";
 
-
 @import "common/header";
 
-@import "common/main";
+@import "common/main/banner";
+
+@import "common/main/features";
+
+@import "common/main/comment";
+
+@import "common/main/price";
+
+@import "common/main/contacts";
 
 @import "common/footer-index";
