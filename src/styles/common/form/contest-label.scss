@@ -1,9 +1,48 @@
 .contest-label {
+  padding-left: 20px;
   font-size: 18px;
 }
 
-.contest-label--red {
+.contest-label--text {
+  display: inline-block;
+  padding-bottom: 15px;
   text-transform: uppercase;
   color: $redColor;
   font-size: 14px;
+}
+
+.contest-label--padding-min {
+  padding-bottom: 10px;
+}
+
+.contest-label--check,
+.contest-label--radio {
+  position: relative;
+  padding-left: 68px;
+
+  &::before {
+    box-sizing: border-box;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid $lightGreyColor;
+    background-color: #ffffff;
+    content: "";
+  }
+}
+
+.contest-label--radio::before {
+  border-radius: 50%;
+}
+
+.contest-input:checked + .contest-label--check::before {
+  background: url("../img/svg/tick.svg") no-repeat;
+  background-size: cover;
+}
+
+.contest-input:checked + .contest-label--radio::before {
+  box-shadow: inset 0 0 0 9px #ffffff;
+  background-color: $redColor;
 }

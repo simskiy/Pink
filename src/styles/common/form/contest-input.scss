@@ -1,3 +1,20 @@
 .contest-input {
-  // styles
+  outline: none;
+  border: 2px solid $lightGreyColor;
+  color: $mainColor;
+  font-size: 18px;
+}
+
+.contest-input::placeholder {
+  color: $mainColor;
+}
+
+.contest-input--text {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18px 20px;
+}
+
+.contest-input--hide {
+  display: none;
 }

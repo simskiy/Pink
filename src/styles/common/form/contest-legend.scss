@@ -1,0 +1,12 @@
+.contest-legend {
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $redColor;
+  font-size: 14px;
+}
+
+.contest-legend--hide {
+  display: none;
+}

@@ -23,50 +23,66 @@ block content
       span.contest-header__text--hide  Пожалуйста, заполните форму ниже:
     form.contest-form(action="")
       .form-name
-        label.contest-label.contest-label--red(for="surname") Фамилию:
-        input#sirname.contest-input.contest-input--text(type="text", name="surname" placeholder="Укажите фамилию *" required)
-        label.contest-label.contest-label--red(for="name") Имя:
-        input#name.contest-input.contest-input--text(type="text", name="name" placeholder="Введите ваше имя *" required)
-        label.contest-label.contest-label--red(for="patronymic") Отчество:
-        input#patronymic.contest-input.contest-input--text(type="text", name="patronymic" placeholder="Ну и отчество тоже")
+        .input-wrapper
+          label.contest-label.contest-label--text(for="surname") Фамилию:
+          input#sirname.contest-input.contest-input--text(type="text", name="surname" placeholder="Укажите фамилию *" required)
+        .input-wrapper
+          label.contest-label.contest-label--text(for="name") Имя:
+          input#name.contest-input.contest-input--text(type="text", name="name" placeholder="Введите ваше имя *" required)
+        .input-wrapper
+          label.contest-label.contest-label--text(for="patronymic") Отчество:
+          input#patronymic.contest-input.contest-input--text(type="text", name="patronymic" placeholder="Ну и отчество тоже")
       .achievement-wrapper
         fieldset.contest-fieldset
           legend.contest-legend Ваши безбашенные достижения в путешествии
           .form-achievement
-            input#selfie.contest-input.context-input--check(type="checkbox", name="selfie" checked)
-            label.contest-label(for="selfie") Сделал селфи с акулой
-            input#suntan.contest-input.context-input--check(type="checkbox", name="suntan" checked)
-            label.contest-label(for="suntan") Обгорел на пляже
-            input#chuck.contest-input.context-input--check(type="checkbox", name="chuck")
-            label.contest-label(for="chuck") Видел Чака Норриса
-            input#souvenir.contest-input.context-input--check(type="checkbox", name="souvenir")
-            label.contest-label(for="souvenir") Накупил сувениров
-            input#tower.contest-input.context-input--check(type="checkbox", name="tower" checked)
-            label.contest-label(for="tower") Удераж башню
-            input#destroy.contest-input.context-input--check(type="checkbox", name="destroy")
-            label.contest-label(for="destroy") Разгромил отель
+            .input-wrapper
+              input#selfie.contest-input.contest-input--hide(type="checkbox", name="selfie" checked)
+              label.contest-label.contest-label--check(for="selfie") Сделал селфи с акулой
+            .input-wrapper
+              input#suntan.contest-input.contest-input--hide(type="checkbox", name="suntan" checked)
+              label.contest-label.contest-label--check(for="suntan") Обгорел на пляже
+            .input-wrapper
+              input#chuck.contest-input.contest-input--hide(type="checkbox", name="chuck")
+              label.contest-label.contest-label--check(for="chuck") Видел Чака Норриса
+            .input-wrapper
+              input#souvenir.contest-input.contest-input--hide(type="checkbox", name="souvenir")
+              label.contest-label.contest-label--check(for="souvenir") Накупил сувениров
+            .input-wrapper
+              input#tower.contest-input.contest-input--hide(type="checkbox", name="tower" checked)
+              label.contest-label.contest-label--check(for="tower") Удераж башню
+            .input-wrapper
+              input#destroy.contest-input.contest-input--hide(type="checkbox", name="destroy")
+              label.contest-label.contest-label--check(for="destroy") Разгромил отель
       .contacts-wrapper
         fieldset.contest-fieldset
-          legend.contest-legend Контактная информация
+          legend.contest-legend.contest-legend--hide Контактная информация
           .form-contacts
-            label.contest-label.contest-label--red(for="phone") Номер телефона
-            input#phone.contest-input.contest-input--text(type="tel", name="phone")
-            label.contest-label.contest-label--red(for="mail") Адрес электронной почты
-            input#mail.contest-input.contest-input--text(type="email", name="mail")
+            .input-wrapper
+              label.contest-label.contest-label--text.contest-label--padding-min(for="phone") Номер телефона
+              input#phone.contest-input.contest-input--text(type="tel", name="phone" placeholder="Номер, пожалуйста")
+            .input-wrapper
+              label.contest-label.contest-label--text.contest-label--padding-min(for="mail") Адрес электронной почты
+              input#mail.contest-input.contest-input--text(type="email", name="mail" placeholder="Введите почту *")
       .app-wrapper
         fieldset.contest-fieldset
-          legend.contest-legend С каким приложением путшествовали
+          legend.contest-legend С каким приложением путшествовали?
           .form-app
-            input#ios.contest-input.contest-input--radio(type="radio", name="app" checked)
-            label.contest-label(for="ios") Pink для iOS
-            input#android.contest-input.contest-input--radio(type="radio", name="app")
-            label.contest-label(for="android") Pink для Android
-            input#win.contest-input.contest-input--radio(type="radio", name="app")
-            label.contest-label(for="win") Windows Phone
+            .input-wrapper
+              input#ios.contest-input.contest-input--hide(type="radio", name="app" checked)
+              label.contest-label.contest-label--radio(for="ios") Pink для iOS
+            .input-wrapper
+              input#android.contest-input.contest-input--hide(type="radio", name="app")
+              label.contest-label.contest-label--radio(for="android") Pink для Android
+            .input-wrapper
+              input#win.contest-input.contest-input--hide(type="radio", name="app")
+              label.contest-label.contest-label--radio(for="win") Windows Phone
       .comment-wrapper
         fieldset.contest-fieldset
           legend.contest-legend Опишите свои эмоции
           .form-comment
             textarea.form-comment__textarea(name="comment", cols="30", rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях")
-      button.btn-contest(type="submit") Отправить форму
-      span.note * - обязательные поля
+      .btn-wrapper
+        button.btn-contest(type="submit") Отправить форму
+        .note-block
+          <span class="note-block__elem">*</span> - обязательные поля
