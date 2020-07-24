@@ -21,6 +21,8 @@ body {
 
 @import "common/form/contest-header";
 
+@import "common/form/contest-form";
+
 @import "common/form/contest-label";
 
 @import "common/form/contest-input";
@@ -29,8 +31,6 @@ body {
 
 @import "common/form/contest-fieldset";
 
-@import "common/form/contest-legend";
-
 @import "common/form/form-achievement";
 
 @import "common/form/achievement-wrapper";
@@ -38,6 +38,8 @@ body {
 @import "common/form/contacts-wrapper";
 
 @import "common/form/form-contacts";
+
+@import "common/form/input-wrapper";
 
 @import "common/form/app-wrapper";
 

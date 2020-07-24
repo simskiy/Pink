@@ -7,3 +7,13 @@
   padding-right: 22px;
   padding-left: 22px;
 }
+
+@include media-tablet {
+  .btn-wrapper {
+    align-items: center;
+    flex-direction: row;
+    order: 6;
+    height: auto;
+    padding-bottom: 54px;
+  }
+}

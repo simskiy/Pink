@@ -6,3 +6,11 @@
   padding-top: 50px;
   padding-left: 22px;
 }
+
+@include media-tablet {
+  .form-achievement {
+    height: 430px;
+    padding-top: 55px;
+    padding-left: 60px;
+  }
+}

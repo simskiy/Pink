@@ -5,3 +5,14 @@
   padding-top: 40px;
   padding-bottom: 52px;
 }
+
+@include media-tablet {
+  .app-wrapper {
+    order: 2;
+    height: auto;
+    background-color: #ffffff;
+    padding: 0;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+}

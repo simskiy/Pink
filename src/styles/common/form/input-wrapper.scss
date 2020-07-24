@@ -1,0 +1,11 @@
+@include media-tablet {
+  .input-wrapper--name {
+    display: flex;
+    align-content: center;
+  }
+
+  .input-wrapper--contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}

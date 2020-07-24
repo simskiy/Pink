@@ -1,3 +1,11 @@
 .contacts-wrapper {
   padding: 40px 22px;
 }
+
+@include media-tablet {
+  .contacts-wrapper {
+    order: 3;
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+}

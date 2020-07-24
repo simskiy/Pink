@@ -3,3 +3,42 @@
   border: none;
   padding: 0;
 }
+
+.contest-fieldset__legend {
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $redColor;
+  font-size: 14px;
+}
+
+.contest-fieldset__legend--hide {
+  display: none;
+}
+
+@include media-tablet {
+  .contest-fieldset {
+    border: 2px solid $lightGreyColor;
+  }
+
+  .contest-fieldset--app {
+    height: 295px;
+  }
+
+  .contest-fieldset--contacts {
+    height: 306px;
+  }
+
+  .contest-fieldset__legend--hide {
+    display: inline;
+  }
+
+  .contest-fieldset--achievement {
+    height: 549px;
+  }
+
+  .contest-fieldset--comment {
+    height: 289px;
+  }
+}

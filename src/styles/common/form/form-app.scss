@@ -6,3 +6,11 @@
   padding-top: 46px;
   padding-left: 22px;
 }
+
+@include media-tablet {
+  .form-app {
+    padding-top: 62px;
+    padding-bottom: 64px;
+    padding-left: 60px;
+  }
+}

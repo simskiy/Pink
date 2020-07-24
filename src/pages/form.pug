@@ -23,18 +23,18 @@ block content
       span.contest-header__text--hide  Пожалуйста, заполните форму ниже:
     form.contest-form(action="")
       .form-name
-        .input-wrapper
-          label.contest-label.contest-label--text(for="surname") Фамилию:
+        .input-wrapper.input-wrapper--name
+          label.contest-label.contest-label--text.contest-label--name(for="surname") Фамилию:
           input#sirname.contest-input.contest-input--text(type="text", name="surname" placeholder="Укажите фамилию *" required)
-        .input-wrapper
-          label.contest-label.contest-label--text(for="name") Имя:
+        .input-wrapper.input-wrapper--name
+          label.contest-label.contest-label--text.contest-label--name(for="name") Имя:
           input#name.contest-input.contest-input--text(type="text", name="name" placeholder="Введите ваше имя *" required)
-        .input-wrapper
-          label.contest-label.contest-label--text(for="patronymic") Отчество:
+        .input-wrapper.input-wrapper--name
+          label.contest-label.contest-label--text.contest-label--name(for="patronymic") Отчество:
           input#patronymic.contest-input.contest-input--text(type="text", name="patronymic" placeholder="Ну и отчество тоже")
       .achievement-wrapper
-        fieldset.contest-fieldset
-          legend.contest-legend Ваши безбашенные достижения в путешествии
+        fieldset.contest-fieldset.contest-fieldset--achievement
+          legend.contest-fieldset__legend Ваши безбашенные достижения в путешествии
           .form-achievement
             .input-wrapper
               input#selfie.contest-input.contest-input--hide(type="checkbox", name="selfie" checked)
@@ -55,18 +55,18 @@ block content
               input#destroy.contest-input.contest-input--hide(type="checkbox", name="destroy")
               label.contest-label.contest-label--check(for="destroy") Разгромил отель
       .contacts-wrapper
-        fieldset.contest-fieldset
-          legend.contest-legend.contest-legend--hide Контактная информация
+        fieldset.contest-fieldset.contest-fieldset--contacts
+          legend.contest-fieldset__legend.contest-fieldset__legend--hide Контактная информация
           .form-contacts
-            .input-wrapper
-              label.contest-label.contest-label--text.contest-label--padding-min(for="phone") Номер телефона
-              input#phone.contest-input.contest-input--text(type="tel", name="phone" placeholder="Номер, пожалуйста")
-            .input-wrapper
-              label.contest-label.contest-label--text.contest-label--padding-min(for="mail") Адрес электронной почты
-              input#mail.contest-input.contest-input--text(type="email", name="mail" placeholder="Введите почту *")
+            .input-wrapper.input-wrapper--contacts
+              label.contest-label.contest-label--text.contest-label--padding-min.contest-label--contacts(for="phone") Номер телефона
+              input#phone.contest-input.contest-input--text.contest-input--contacts.contest-input--phone(type="tel", name="phone" placeholder="Номер, пожалуйста")
+            .input-wrapper.input-wrapper--contacts
+              label.contest-label.contest-label--text.contest-label--padding-min.contest-label--contacts(for="mail") Адрес электронной почты
+              input#mail.contest-input.contest-input--text.contest-input--contacts.contest-input--mail(type="email", name="mail" placeholder="Введите почту *")
       .app-wrapper
-        fieldset.contest-fieldset
-          legend.contest-legend С каким приложением путшествовали?
+        fieldset.contest-fieldset.contest-fieldset--app
+          legend.contest-fieldset__legend С каким приложением путшествовали?
           .form-app
             .input-wrapper
               input#ios.contest-input.contest-input--hide(type="radio", name="app" checked)
@@ -78,8 +78,8 @@ block content
               input#win.contest-input.contest-input--hide(type="radio", name="app")
               label.contest-label.contest-label--radio(for="win") Windows Phone
       .comment-wrapper
-        fieldset.contest-fieldset
-          legend.contest-legend Опишите свои эмоции
+        fieldset.contest-fieldset.contest-fieldset--comment
+          legend.contest-fieldset__legend Опишите свои эмоции
           .form-comment
             textarea.form-comment__textarea(name="comment", cols="30", rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях")
       .btn-wrapper

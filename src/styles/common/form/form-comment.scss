@@ -14,3 +14,16 @@
   color: $mainColor;
   font-size: 18px;
 }
+
+@include media-tablet {
+  .form-comment {
+    padding-top: 40px;
+    padding-right: 60px;
+    padding-bottom: 53px;
+    padding-left: 60px;
+  }
+
+  .form-comment__textarea {
+    height: 189px;
+  }
+}

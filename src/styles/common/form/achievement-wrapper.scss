@@ -6,3 +6,15 @@
   padding-top: 37px;
   padding-bottom: 44px;
 }
+
+@include media-tablet {
+  .achievement-wrapper {
+    order: 4;
+    height: auto;
+    background-color: #ffffff;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
+}

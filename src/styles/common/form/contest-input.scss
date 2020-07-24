@@ -18,3 +18,21 @@
 .contest-input--hide {
   display: none;
 }
+
+@include media-tablet {
+  .contest-input--contacts {
+    order: 1;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-right: 60px;
+  }
+
+  .contest-input--phone {
+    background-image: url("../img/svg/phone.svg");
+  }
+
+  .contest-input--mail {
+    background-image: url("../img/svg/mail.svg");
+  }
+}

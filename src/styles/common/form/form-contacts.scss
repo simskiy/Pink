@@ -4,3 +4,12 @@
   justify-content: space-between;
   height: 190px;
 }
+
+@include media-tablet {
+  .form-contacts {
+    height: 230px;
+    padding-top: 40px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}

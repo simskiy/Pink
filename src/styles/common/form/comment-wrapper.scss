@@ -4,3 +4,14 @@
   padding-top: 40px;
   padding-bottom: 52px;
 }
+
+@include media-tablet {
+  .comment-wrapper {
+    order: 5;
+    height: auto;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+  }
+}

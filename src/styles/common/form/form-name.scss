@@ -8,3 +8,13 @@
   padding-bottom: 44px;
   padding-left: 20px;
 }
+
+@include media-tablet {
+  .form-name {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    height: 291px;
+    padding-bottom: 60px;
+  }
+}

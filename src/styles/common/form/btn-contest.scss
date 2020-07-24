@@ -9,3 +9,10 @@
   color: #ffffff;
   font-size: 18px;
 }
+
+@include media-tablet {
+  .btn-contest {
+    align-self: initial;
+    width: 296px;
+  }
+}
