@@ -13,3 +13,11 @@
     padding-left: 60px;
   }
 }
+
+@include media-desktop {
+  .form-contacts {
+    flex-direction: row;
+    height: auto;
+    padding-bottom: 22px;
+  }
+}

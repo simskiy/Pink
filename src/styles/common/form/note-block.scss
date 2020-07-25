@@ -4,6 +4,16 @@
   font-size: 14px;
 }
 
-.note-block__elem {
+.note-block__red {
   color: $redColor;
+}
+
+.note-block__hide {
+  display: none;
+}
+
+@include media-desktop {
+  .note-block__hide {
+    display: inline;
+  }
 }

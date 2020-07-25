@@ -18,3 +18,12 @@
     padding-bottom: 60px;
   }
 }
+
+@include media-desktop {
+  .form-name {
+    padding-right: 74px;
+    padding-bottom: 0;
+    padding-left: 132px;
+    grid-area: name;
+  }
+}

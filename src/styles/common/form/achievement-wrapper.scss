@@ -18,3 +18,11 @@
     padding-left: 20px;
   }
 }
+
+@include media-desktop {
+  .achievement-wrapper {
+    padding-right: 132px;
+    padding-left: 132px;
+    grid-area: achievement;
+  }
+}

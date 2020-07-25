@@ -16,3 +16,11 @@
     padding-left: 22px;
   }
 }
+
+@include media-desktop {
+  .app-wrapper {
+    padding-right: 132px;
+    padding-left: 0;
+    grid-area: app;
+  }
+}

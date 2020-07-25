@@ -4,3 +4,16 @@
     flex-direction: column;
   }
 }
+
+@include media-desktop {
+  .contest-form {
+    display: grid;
+    grid-template-areas:
+      "name app"
+      "contacts contacts"
+      "achievement achievement"
+      "comment comment"
+      "btn btn";
+    grid-template-columns: 637px 563px;
+  }
+}

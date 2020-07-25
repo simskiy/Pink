@@ -17,3 +17,11 @@
     padding-bottom: 54px;
   }
 }
+
+@include media-desktop {
+  .btn-wrapper {
+    padding-right: 132px;
+    padding-left: 132px;
+    grid-area: btn;
+  }
+}

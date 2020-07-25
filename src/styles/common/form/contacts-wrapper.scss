@@ -9,3 +9,11 @@
     padding-bottom: 0;
   }
 }
+
+@include media-desktop {
+  .contacts-wrapper {
+    padding-right: 132px;
+    padding-left: 132px;
+    grid-area: contacts;
+  }
+}

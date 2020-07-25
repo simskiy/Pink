@@ -9,3 +9,9 @@
     flex-direction: column;
   }
 }
+
+@include media-desktop {
+  .input-wrapper--contacts {
+    width: 371px;
+  }
+}

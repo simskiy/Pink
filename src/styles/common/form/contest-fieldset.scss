@@ -42,3 +42,14 @@
     height: 289px;
   }
 }
+
+@include media-desktop {
+  .contest-fieldset__legend {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  .contest-fieldset--contacts {
+    height: auto;
+  }
+}
