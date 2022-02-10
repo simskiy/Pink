@@ -45,7 +45,7 @@
     "gulp-w3c-html-validator": "^1.4.4",
     "husky": "^4.2.5",
     "lighthouse": "^6.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "open": "^7.0.4",
     "stylelint": "^13.6.0",
     "stylelint-config-htmlacademy": "^0.1.4",
